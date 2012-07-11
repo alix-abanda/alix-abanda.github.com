@@ -1,0 +1,448 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: #111;
+    overflow-y: hidden;
+}
+
+a, a:visited  {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: #CCC;
+    text-decoration: none;
+}
+
+.customResizeHeight,
+.customResizeHeightInner {
+    height: 400px;
+}
+
+#container {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 40px;
+    position: relative;
+}
+
+#content {
+    padding-bottom: 83px;
+    overflow: hidden;
+    position: relative;
+}
+
+.home h1.title {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+}
+
+.home h2.sub-title {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.home .description {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 60px;
+    line-height: 24px;
+}
+
+.home .left-quote {
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+.home .right-quote {
+    position: relative;
+    top: 16px;
+    left: 10px;
+}
+
+.page .title {
+    text-align: right;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 10px 85px 0 0;
+    margin: 0 !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+.page .littletitle {
+    text-align: right;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    margin-right: 85px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.page .title img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.agence {
+    font-size: 17px;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.exposition {
+    font-style: italic;
+}
+
+.projects {
+    padding-left: 60px;
+    font-size: 17px;
+    margin-bottom: 10px;
+    *margin-bottom: 50px;
+}
+
+.livraison {
+    font-size: 13px;
+}
+
+.realisations_container {
+    width: 800px;
+    margin: 0 auto;
+}
+.realisations {
+    width: 800px;
+}
+.realisations .realisation {
+    width: 150px;
+    height: 175px;
+    float: left;
+    margin: 10px 25px;
+    text-align: center;
+}
+.realisations .realisation_size2 {
+    height: 125px;
+}
+.realisations h2 {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5px;
+}
+.realisations .realisation_first {
+    margin-left: 0;
+}
+
+#menu {
+    position: fixed;
+    bottom: 0;
+    width: 1024px;
+    height: 72px;
+    border-top: 3px solid #CCC;
+    background: #111;
+    z-index: 999;
+}
+
+#menu ul {
+    list-style: none;
+    height: 32px;
+    margin: 20px 0;
+    padding: 0px;
+}
+
+#menu li {
+    float: left;
+    border: 1px solid #555;
+    text-align: center;
+    margin: 0 36px;
+    -o-transition: border-top-color 0.218s, border-right-color 0.218s, border-bottom-color 0.218s, border-left-color .218s;
+    -webkit-transition: border-color .218s;
+
+}
+
+#menu li.active {
+    border-color: white;
+}
+
+#menu a {
+    display: block;
+    height: 20px;
+    width: 120px;
+    padding: 5px;
+    color: #CCC;
+    text-decoration: none;
+    -o-transition: color 0.218s;
+    -webkit-transition: color .218s;
+}
+
+#menu li:hover {
+    border-color: #EEE;
+}
+
+#menu a:hover {
+    color: #EEE;
+}
+
+/* root element for horizontal scrollables */
+.scrollable {
+    position: relative;
+    overflow: hidden;
+    margin: 0 62px;
+    width: 800px;
+    height: 400px;
+    float: left;
+}
+.scrollableExtended {
+    margin: 0 112px;
+}
+
+/* root element for scrollable items */
+.scrollable .items {
+    width: 20000em;
+    position: absolute;
+    clear: both;
+}
+
+.scrollable .items .item {
+    float: left;
+    width: 800px;
+    padding: 0;
+}
+
+a.browse {
+    background: url("../img/slider/arrows.png") no-repeat left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1px;
+}
+
+a.left {
+    margin-left: 0px;
+}
+
+a.right {
+    background: url("../img/slider/arrows.png") no-repeat right;
+    clear: right;
+    margin-right: 0px;
+}
+
+a.disabled {
+    background: none !important;
+}
+
+.recenter {
+    width: 800px;
+    margin: 0 auto;
+}
+
+/*
+ * jQuery Nivo Slider v2.6
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+
+/* The Nivo Slider styles */
+.nivoSlider {
+    position: relative;
+}
+
+.nivoSlider img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 6;
+    display: none;
+}
+
+/* The slices and boxes in the Slider */
+.nivo-slice {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+}
+
+.nivo-box {
+    display: block;
+    position: absolute;
+    z-index: 5;
+}
+
+/* Caption styles */
+.nivo-caption {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: #000;
+    color: #fff;
+    opacity: 0.8; /* Overridden by captionOpacity setting */
+    width: 100%;
+    z-index: 8;
+}
+
+.nivo-caption p {
+    padding: 5px;
+    margin: 0;
+}
+
+.nivo-caption a {
+    display: inline !important;
+}
+
+.nivo-html-caption {
+    display: none;
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.nivo-prevNav {
+    left: 0px;
+}
+
+.nivo-nextNav {
+    right: 0px;
+}
+
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.nivo-controlNav a.active {
+    font-weight: bold;
+}
+
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.slider-wrapper {
+    height: 500px; /* Make sure your images are the same size */
+}
+
+.theme-default #slider {
+    margin: 0 auto;
+    width: 800px; /* Make sure your images are the same size */
+    height: 500px; /* Make sure your images are the same size */
+}
+
+.theme-default .nivoSlider {
+    position: relative;
+    background: #fff url("../img/slider/loading.gif") no-repeat 50% 50%;
+}
+
+.theme-default .nivoSlider img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.theme-default .nivoSlider a {
+    border: 0;
+    display: block;
+}
+
+.theme-default .nivo-controlNav {
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    /*left: 50%;
+    bottom: -30px;
+    margin-left: -40px; /* Tweak this to center bullets */
+}
+
+.backButton {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    width: 22px;
+    height: 22px;
+    background: url("../img/back.png") no-repeat;
+}
+
+.theme-default .nivo-controlNav a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url("../img/slider/bullets.png") no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    margin-right: 3px;
+    /*float: left;*/
+}
+
+.theme-default .nivo-controlNav a.active {
+    background-position: 0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../img/slider/arrows.png") no-repeat;
+    text-indent: -9999px;
+    border: 0;
+}
+
+.theme-default a.nivo-nextNav {
+    background-position: -30px 0;
+    right: 15px;
+}
+
+.theme-default a.nivo-prevNav {
+    left: 15px;
+}
+
+.theme-default .nivo-caption a {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+
+.theme-default .nivo-caption a:hover {
+    color: #fff;
+}
